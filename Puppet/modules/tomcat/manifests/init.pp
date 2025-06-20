@@ -1,11 +1,11 @@
 class tomcat {
 
 	package {"tomcat":
-		ensure => installed
+		ensure => latest
 	}
 	
 	package {"tomcat-native":
-		ensure => installed
+		ensure => latest
 	}
 	
 	service {"tomcat":

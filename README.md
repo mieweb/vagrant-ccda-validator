@@ -38,3 +38,14 @@ http://localhost:8080/referenceccdaservice/swagger-ui.html#/reference-ccda-valid
 Having issues?
 =====
 Check the logs folder!
+
+## System Versions
+=====
+This project uses the following updated versions:
+- **OS**: Fedora 39 (latest stable)
+- **Java**: OpenJDK 17 (LTS)
+- **CCDA Validator**: v1.1.0 (latest)
+- **Package Manager**: dnf (modern Fedora)
+- **Tomcat**: Latest available version
+
+All dependencies are configured to use their latest stable versions for improved security and performance.
