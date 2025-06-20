@@ -4,7 +4,7 @@
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  config.vm.box = "bento/fedora-21"
+  config.vm.box = "bento/fedora-39"
   config.vm.network "forwarded_port", guest: 8080, host: 8080
 
   config.vm.synced_folder "./webapps", "/var/lib/tomcat/webapps", create:true, owner: "root", group: "root", mount_options: ["dmode=777,fmode=666"]
@@ -17,7 +17,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision "shell", path: "files/scripts/do-magic.sh"
   
   config.vm.provision "shell" do |s|
-    s.inline = "yum -y install puppet"
+    s.inline = "dnf -y install puppet"
   end
 
   config.vm.provision "puppet" do |puppet|

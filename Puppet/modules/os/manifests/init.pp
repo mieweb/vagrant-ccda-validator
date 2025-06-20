@@ -1,15 +1,23 @@
 class os {
 
-	package {"java-1.8.0-openjdk":
-		ensure => installed
+	package {"java-17-openjdk":
+		ensure => latest
+	}
+	
+	package {"java-17-openjdk-devel":
+		ensure => latest
 	}
 	
 	package {"zip":
-		ensure => installed
+		ensure => latest
 	}
 
 	package {"unzip":
-		ensure => installed
+		ensure => latest
+	}
+	
+	package {"wget":
+		ensure => latest
 	}
 	
 }
